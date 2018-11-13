@@ -260,6 +260,137 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-JS部分基本内容回顾" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/13/JS部分基本内容回顾/" class="article-date">
+      <time datetime="2018-11-13T06:02:01.280Z" itemprop="datePublished">2018-11-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>部分基本内容回顾</p>
+<p>一、基本数据类型</p>
+<p>1.1    number    string    boolean    null    undefined</p>
+<p>二、复杂数据类型   对象（广义的）</p>
+<p>2.1    Array    Date    Math    new string（）</p>
+<p>new Number（）    new Boolean（）    function</p>
+<p>三、基本包装类型对象的概念</p>
+<p>js为了方便开发者开发操作基本数据类型值，提供一个对象进行操作</p>
+<p>四、基本数据类型和复杂数据类型的区别</p>
+<p>4.1    保存数据的个数不同</p>
+<p>4.2    在内存中保存方式不同</p>
+<p>基本数据类型在内存单元中保存的是具体值</p>
+<p>复杂数据类型在内存单元中保存的是具体值得指针（地址）</p>
+<p>4.3    复制操作的结果不同</p>
+<p>复制操作复制的内存单元中保存的值</p>
+<p>基本数据类型复制前后，两个值没有关系</p>
+<p>复杂数据类型复制前后，两个值是同一个值</p>
+<p>4.4    函数参数值传递（复制）的结果不同</p>
+<p>因为基本数据类型和复杂数据类型在复制后结果不同，作为函数传递后形参和实参的关系不同</p>
+<p>小结：如果实参是基本数据类型，修改后必须设置返回值（获取型操作）</p>
+<p>如果实参是复杂数据类型，修改后不需要设置返回值（设置型操作）</p>
+<p>五、对象使用方式根据功能分为两类</p>
+<p>5.1    作为数据储存适应</p>
+<p>数据：有序的数据存储方式</p>
+<p>对象：无序的数据存储方式</p>
+<p>5.2    作用工具使用</p>
+<p>内置工具</p>
+<p>Array</p>
+<p>push（），pop（），shift（），unshift（）——从数组收尾进行操作</p>
+<p>splice（）——从数据中任意位置进行操作</p>
+<p>join（），reverse（），sort（)，indexOf（）</p>
+<p>string</p>
+<p>slice（）</p>
+<p>split（）——与数组方法结合使用</p>
+<p>replace（）</p>
+<p>Math</p>
+<p>Math.ceil( )    Math.floor（）    Math.random（） </p>
+<p>自定义工具</p>
+<p>单个对象创建（）</p>
+<p>new Objuect（）{  }</p>
+<p>多个对象创建</p>
+<p>工厂模式（使用函数创建对象）</p>
+<p>构造函数</p>
+<p>使用时的注意点：</p>
+<p>必须加new</p>
+<p>命名首字母大写</p>
+<p>内部使用this设置功能</p>
+<p>new的作用</p>
+<p>创建对象</p>
+<p>将this设置为创建的对象</p>
+<p>返回对象</p>
+<p>调用构造函数</p>
+<p>六、prototype——原型</p>
+<p>6.1    每个函数都具有一个属性prototype，值为一个对象</p>
+<p>这个属性其实是给构造函数准备的，其他的函数不使用这个属性的功能</p>
+<p>作用：用来保存构造函数中所用需要公用的方法，简化代码书写。</p>
+<p>6.2    为什么对象可以使用原型对象中的方法？</p>
+<p>通过观察对象，我们发现对象具有一个<strong>proto</strong>属性，是new给对象设置的</p>
+<p>通过比较发现，这个<strong>proto</strong>与.prototype实际上是一个值</p>
+<p>6.3    对象的属性访问方式</p>
+<p>首先找到自身，如果存在，使用。</p>
+<p>如果没有找到，找到<strong>proto</strong>属性，如果有，使用</p>
+<p>七、constructor—构造器</p>
+<p>是prototype的属性，但是不是给自己准备的，而是让创建的对象使用的。</p>
+<p>作用：用来描述对象和构造函数之间关系的一种方式</p>
+<p>八、this的使用</p>
+<p>普通函数中：window</p>
+<p>方法中：当前对象（调用者）</p>
+<p>原型的方法中：创建的对象</p>
+<p>构造函数中：创建的对象</p>
+<p>九、面向对象简介</p>
+<p>9.1    基本概念：</p>
+<p>面向：专注于某个事物</p>
+<p>面向于对象：专注于对象的操作</p>
+<p>面向于过程：专注于过程的操作</p>
+<p>例如要对数值数组进行排序操作，这就是一种面向对象的操作方式。</p>
+<p>使用数组对象—sort（）—调用方法完成功能 —传入参数进行降序排序</p>
+<p>9.2    以前使用过的面向对象和面向过程操作：</p>
+<p>面向过程：大部分代码都是面向过程的</p>
+<p>面向对象：内置对象功能，jQuery功能，</p>
+<p>面向对象的操作总体来说就是四个字：拿来主义。</p>
+<p>9.3    封装：将功能封装成为对象，用于功能的复用。</p>
+<p>   继承：为了实现更好地复用。</p>
+<p>   多态：增强功能使用的灵活性。</p>
+<p>9.4    js是基于原型的语言</p>
+<p>  js是基于对象的语言（通过大量的内置对象功能完成操作）</p>
+<pre><code>js原生语法中不支持面向对象操作，我们可以通过一些操作取模拟面向对象的特征，从而实现面向对象操作。
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-test" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
